@@ -10,6 +10,8 @@ public class Html {
     private static final String H1 = "h1";
     private static final String DIV = "div";
     private static final String A = "a";
+    private static final String FORM = "form";
+    private static final String INPUT = "input";
 
 
     private static Node node(String nodeName, Attributes attributeList, Node... content) {
@@ -20,11 +22,11 @@ public class Html {
         return new Node(nodeName, new Attributes(), new Nodes());
     }
 
-    private static Node node(String nodeName, HtmlAttribute... attributes) {
+    private static Node node(String nodeName, Attribute... attributes) {
         return new Node(nodeName, new Attributes(attributes), new Nodes());
     }
 
-    public static Attributes attributes(HtmlAttribute... attributes) {
+    public static Attributes attributes(Attribute... attributes) {
         return new Attributes(attributes);
     }
 
@@ -68,7 +70,7 @@ public class Html {
         return node(DIV);
     }
 
-    public static Node div(HtmlAttribute... attributes) {
+    public static Node div(Attribute... attributes) {
         return node(DIV, attributes);
     }
 
@@ -80,12 +82,28 @@ public class Html {
         return node(A);
     }
 
-    public static Node a(HtmlAttribute attribute, Node... content) {
+    public static Node a(Attribute attribute, Node... content) {
         return node(A, attributes(attribute), content);
     }
 
     public static Node a(Attributes attributes, Node... content) {
         return node(A, attributes, content);
+    }
+
+    public static Node form(Attributes attributes, Node... content) {
+        return node(FORM, attributes, content);
+    }
+
+    public static Node input(Attribute... attributes) {
+        return node(INPUT, attributes);
+    }
+
+    public static Node submit(String text) {
+        return node(INPUT,
+                attributes(
+                        new Attribute("type", "submit"),
+                        new Attribute("value", text)
+                ));
     }
 
     public static Node text(String textString) {

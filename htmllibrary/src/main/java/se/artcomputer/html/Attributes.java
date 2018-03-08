@@ -4,11 +4,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("WeakerAccess")
 public class Attributes {
-    private final List<HtmlAttribute> attributeList;
+    private final List<Attribute> attributeList;
 
 
-    public Attributes(HtmlAttribute... attributeList) {
+    public Attributes(Attribute... attributeList) {
         this.attributeList = Arrays.stream(attributeList).collect(Collectors.toList());
     }
 

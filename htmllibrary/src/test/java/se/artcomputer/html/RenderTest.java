@@ -23,7 +23,7 @@ public class RenderTest {
 
     @Test
     public void renderDivNodeWithAttribute() {
-        String actual = div(new HtmlAttribute("class", SOME_CLASS)).toString();
+        String actual = div(new Attribute("class", SOME_CLASS)).toString();
         assertEquals("<div class=\"" + SOME_CLASS + "\"></div>", actual);
     }
 
