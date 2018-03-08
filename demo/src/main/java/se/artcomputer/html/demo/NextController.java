@@ -10,12 +10,12 @@ import static se.artcomputer.html.HtmlAttribute.className;
 import static se.artcomputer.html.HtmlAttribute.href;
 
 @RestController
-public class HomeController {
+public class NextController {
 
     private static final HtmlAttribute blueText = new HtmlAttribute("style", "color : blue");
     private static final HtmlAttribute greenText = new HtmlAttribute("style", "color : green");
 
-    @RequestMapping("/")
+    @RequestMapping("/next")
     public String index() {
         return html(
                 head(
@@ -25,15 +25,15 @@ public class HomeController {
                         attributes(blueText),
                         h1(
                                 attributes(greenText),
-                                text("Greetings from Spring Boot!")),
+                                text("We are now on the next page")),
                         div(
                                 text("Here we thrive with Java rendering pages.")),
                         div(
                                 a(
                                         attributes(
                                                 className("button"),
-                                                href("/next")),
-                                        text("Click here for next page"))
+                                                href("/")),
+                                        text("Click here for home page"))
                         ))
         ).toString();
     }
