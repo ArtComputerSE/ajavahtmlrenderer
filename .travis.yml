@@ -1,4 +1,6 @@
 language: java
+jdk:
+- openjdk10
 
 before_deploy:
 - mvn help:evaluate -N -Dexpression=project.version|grep -v '\['
