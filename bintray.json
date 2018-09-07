@@ -16,7 +16,7 @@
   "files": [
     {
       "includePattern": "target/(.*jar)",
-      "uploadPattern": "se/artcomputer/html/1.0.3/ajavahtmlrenderer/$1"
+      "uploadPattern": "se/artcomputer/html/ajavahtmlrenderer/1.0.3/$1"
     }
   ],
   "publish": true
