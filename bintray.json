@@ -1,0 +1,22 @@
+{
+  "package": {
+    "name": "ajavahtmlrenderer",
+    "repo": "ajavahtmlrenderer",
+    "subject": "perty",
+    "vcs_url": "https://github.com/ArtComputerSE/ajavahtmlrenderer.git",
+    "licenses": [
+      "MIT"
+    ]
+  },
+  "version": {
+    "name": "1.0.0",
+    "released": "2015-01-04",
+    "vcs_tag": "1.0.0"
+  },
+  "files": [
+    {
+      "includePattern": "ajavahtmlrenderer/target/*.jar"
+    }
+  ],
+  "publish": true
+}
