@@ -12,6 +12,8 @@ deploy:
   user: "perty"
   key: "82b0992c44b8af7e3e3a05cb9f15a1abbafe713d"
   skip_cleanup: true # to upload artifacts created during the build
+  on:
+    all_branches: true
 - provider: releases
   api_key:
     secure: bWrkr/1er0iBnUd0feHkBPB2+mlVMqyk3bpHTTELWV8CreCzmkSFRdV9841F6BwVj7JOvZ4IFY1GdLcgEFpF2sf57yhUlonxMdQba1F75A0lRkVyD8wNKFYQShJIGbr5F01oAmcX0ED4L48S9EdAsgMvwhxPx5o0UI/pn/biCzi2cwVzA87flZvAlBLc2adolT5r6rJ1oO7CEJ3K+F4UXjDhDFBSH5gUandB6O4VGyOMjOveY0trGXNNY1n2KQ26M+QGfIerivVnzA1DKR4UsM+s1m1Nob7JRu/A00KhkDV6KC9LwjDrH4gR4e8SM+lmoxfFdvhokyi6UJo+Otxe/rF6hNdaGyt3u1LGPQraRZLEA+xNSggqhESBM965F2Vb8i9DV5U5mgdi2DkDosaPh7CfXcpsVc2yAmmCDDPMcrZW1YvbVwycS+4OkvaTeUV3nmLwE9ZquFku8Rj5/5lbmAHor8Vn0mwOTc3ODTi/k/LKD/l49Rtsjw8CZj9Z8t6O6uE64HUMJu6TDh0rum8CCgNG3xZRMm/RpfMa5AkqKwC9KuB3n6oOOGiFoMGQBGbJEoNw8Lkk1KCJwD0CWdFDCVWfXeVX5t+LjtlCW08x4VLHhJa50Gulrp5BpaSg4Uhd0EMCNikn7XqlPvXbUNhPruwz1isSOF6fZVp0G6Krpjk=
