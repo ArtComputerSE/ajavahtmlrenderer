@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@SuppressWarnings("WeakerAccess")
 public class Nodes {
 
     private final List<Node> nodeList;

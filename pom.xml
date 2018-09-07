@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>se.artcomputer.html</groupId>
-    <artifactId>html-library-parent</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <artifactId>ajavahtmlrenderer-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>htmllibrary</module>
+        <module>ajavahtmlrenderer</module>
         <module>demo</module>
     </modules>
 
@@ -23,14 +23,14 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:https://github.com/ArtcomputerSE/html.git</connection>
-        <url>https://github.com/ArtcomputerSE/html</url>
+        <connection>scm:git:https://github.com/ArtcomputerSE/ajavahtmlrenderer.git</connection>
+        <url>https://github.com/ArtcomputerSE/ajavahtmlrenderer</url>
     </scm>
 
     <distributionManagement>
         <site>
             <id>html.wiki</id>
-            <url>https://github.com/ArtcomputerSE/html/wiki</url>
+            <url>https://github.com/ArtcomputerSE/ajavahtmlrenderer/wiki</url>
         </site>
 
         <snapshotRepository>

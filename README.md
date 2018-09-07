@@ -74,6 +74,10 @@ build a library of little components that you can reuse across different microse
 
 ## Status
 
-Not even alpha.
+Alpha.
+
+## Alternatives
+
+- j2html https://github.com/tipsy/j2html. Has another style that you may prefer and obviously been around for longer.
 
  
