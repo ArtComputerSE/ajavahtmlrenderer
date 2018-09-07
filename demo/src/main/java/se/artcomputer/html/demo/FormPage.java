@@ -3,7 +3,6 @@ package se.artcomputer.html.demo;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import se.artcomputer.html.Attribute;
 
 import static se.artcomputer.html.Attribute.*;
 import static se.artcomputer.html.CssUtil.styleSheet;
@@ -26,7 +25,7 @@ public class FormPage {
                                 text("Here we have a form and your job is to fill it in.")
                         ),
                         form(
-                                attributes(new Attribute("action", "/formaction")),
+                                attributes(action("/formaction")),
                                 div(text("Form content")),
                                 div(
                                         text("First name: "),
