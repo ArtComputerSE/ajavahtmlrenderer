@@ -6,7 +6,7 @@
 
     <groupId>se.artcomputer.html</groupId>
     <artifactId>ajavahtmlrenderer</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.4</version>
     <packaging>jar</packaging>
 
     <licenses>
