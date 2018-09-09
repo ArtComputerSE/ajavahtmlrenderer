@@ -2,7 +2,11 @@ package se.artcomputer.html;
 
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+import static se.artcomputer.html.Attribute.className;
+import static se.artcomputer.html.Attribute.href;
 import static se.artcomputer.html.Html.*;
 
 public class RenderTest {
@@ -10,6 +14,7 @@ public class RenderTest {
     private static final String SOME_TEXT = "some text";
     private static final String SOME_CLASS = "someClass";
     private static final String SOME_HEADLINE = "some head line";
+    private static final String SOME_TITLE = "someTitle";
 
     @Test
     public void renderEmptyDivNode() {
@@ -23,8 +28,42 @@ public class RenderTest {
 
     @Test
     public void renderDivNodeWithAttribute() {
-        String actual = div(new Attribute("class", SOME_CLASS)).toString();
+        String actual = div(
+                className(SOME_CLASS)
+        ).toString();
         assertEquals("<div class=\"" + SOME_CLASS + "\"></div>", actual);
+    }
+
+    @Test
+    public void anchorHasNoMandatoryAttributes() {
+        assertThat(a().toString(), is("<a ></a>"));
+    }
+
+    @Test
+    public void anchorWithUrlAndText() {
+        String url = "http://www.w3.org/";
+        String linkText = "CERN";
+        String expected = "<a href=\"" + url + "\">" + linkText + "</a>";
+        String actual = a(
+                href(url),
+                text(linkText)
+        ).toString();
+        assertThat(actual, is(expected));
+    }
+
+    @Test
+    public void anchorWithTitleUrlAndText() {
+        String url = "http://www.w3.org/";
+        String linkText = "CERN";
+        String title = "title=\"" + SOME_TITLE;
+        String expected = "<a href=\"" + url + "\" " + title + "\">" + linkText + "</a>";
+        String actual = a(
+                attributes(
+                        href(url),
+                        new Attribute("title", SOME_TITLE)),
+                text(linkText)
+        ).toString();
+        assertThat(actual, is(expected));
     }
 
     @Test
@@ -37,5 +76,36 @@ public class RenderTest {
                 .toString();
         assertEquals("<html ><head ></head><body ><h1 >" + SOME_HEADLINE + "</h1>" +
                 "<div >" + SOME_TEXT + "</div></body></html>", actual);
+    }
+
+    @Test
+    public void bodyWithAtttributes() {
+        String actual = Html.html(
+                body(
+                        attributes(className(SOME_CLASS)),
+                        h1(attributes(className(SOME_CLASS)), text(SOME_HEADLINE))
+                )
+        ).toString();
+        String expected = "<html ><body class=\"someClass\">" +
+                "<h1 class=\"someClass\">" + SOME_HEADLINE + "</h1>" +
+                "</body></html>";
+        assertThat(actual, is(expected));
+    }
+
+    @Test
+    public void linkWithHref() {
+
+        String actual = Html.html(
+                head(
+                        link(
+                                href(SOME_TEXT)
+                        )
+                )
+        ).toString();
+
+        String expected = "<html ><head >" +
+                "<link href=\"" + SOME_TEXT + "\"></link>" +
+                "</head></html>";
+        assertThat(actual, is(expected));
     }
 }

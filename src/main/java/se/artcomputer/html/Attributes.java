@@ -15,6 +15,6 @@ public class Attributes {
 
     @Override
     public String toString() {
-        return attributeList.stream().map(Object::toString).collect(Collectors.joining());
+        return attributeList.stream().map(Object::toString).collect(Collectors.joining(" "));
     }
 }

@@ -3,6 +3,7 @@ package se.artcomputer.html;
 @SuppressWarnings("WeakerAccess")
 public class Html {
 
+    @SuppressWarnings("squid:S1700")
     private static final String HTML = "html";
     private static final String HEAD = "head";
     private static final String LINK = "link";
@@ -13,6 +14,9 @@ public class Html {
     private static final String FORM = "form";
     private static final String INPUT = "input";
 
+    private Html() {
+        // Utility class
+    }
 
     private static Node node(String nodeName, Attributes attributeList, Node... content) {
         return new Node(nodeName, attributeList, new Nodes(content));
@@ -42,12 +46,8 @@ public class Html {
         return node(HEAD, contents);
     }
 
-    public static Node link(Attributes attributes) {
+    public static Node link(Attribute... attributes) {
         return node(LINK, attributes);
-    }
-
-    public static Node body() {
-        return node(BODY);
     }
 
     public static Node body(Attributes attributes, Node... contents) {
