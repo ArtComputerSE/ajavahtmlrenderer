@@ -6,7 +6,7 @@
 
     <groupId>se.artcomputer.html</groupId>
     <artifactId>ajavahtmlrenderer</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <packaging>jar</packaging>
 
     <licenses>
@@ -67,6 +67,7 @@
     </dependencies>
 
     <build>
+        <sourceDirectory>src/main/se.artcomputer.html</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
