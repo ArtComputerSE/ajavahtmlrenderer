@@ -20,7 +20,8 @@ deploy:
 - provider: bintray
   file: "bintray.json"
   user: "perty"
-  key: "82b0992c44b8af7e3e3a05cb9f15a1abbafe713d"
+  key:
+     secure: "mVEXwBebjLHUDCQwy4GRFu8sQpSisr2IBEXvy5zB0HggtpzejNFKUs0RA+GvvfMhgb3xLwbiSj4ePKXKyMIjPf1MrSD7z/YzcsB3z1OhfCyR8stwyq/xofmwTS1GJaeObUPKqxjlvJSqZivSJtek1fufqnjvmmEDh0M/ODfTIl5M4hRvyVX5yZbMTok6lHp8UEABuRTHpJzC62olTHNMgsRUp9fan697N0yA/N4aW4+Cx2xf0aylp66Gkl3p71cKRxVF+lcMUmdqWwFNhEe2P/g9nXAhx23kcYwC1TeDLKbckKaVPGsNtxENjtKzleOCOKDYh8A8C3WZEDVMUtwnm3K39rXAefbHcP/Lj3/okR65pzdyVOKucVxNTybqSJ2nWXoHwtvldf+HJ+1ACAtxHVxsU50XtV1o8bXsjuk8e7snqHihAIW3ww6W/CEYLhlit2PMBZ7GJnOmMEooHP4Usfb/sy9vop22LoCLzuZ3xMt+yvlAXSXW42W9tQxkcUwM0G3x//caVlHcmFgMYsyIZCHfDdVfk5mnjCwaK03yyVrK5Gsobb7bCDiWykvGlO11tsdggu3GwBAHK2OdQbMOGqLPhqkQ0lAXoXAd28/hM4JlQg7WpSKq/5yU1pIGN9L38s6LXCtJgCxntMpGTA+R5VvqmQFAEhCO7maCM63ntWc="
   skip_cleanup: true # to upload artifacts created during the build
   on:
     all_branches: true
