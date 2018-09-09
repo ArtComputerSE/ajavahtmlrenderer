@@ -46,7 +46,7 @@ public class Html {
         return node(HEAD, contents);
     }
 
-    public static Node link(Attribute... attributes) {
+    public static Node link(Attributes attributes) {
         return node(LINK, attributes);
     }
 

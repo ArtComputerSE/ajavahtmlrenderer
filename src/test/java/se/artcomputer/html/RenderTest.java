@@ -98,7 +98,7 @@ public class RenderTest {
         String actual = Html.html(
                 head(
                         link(
-                                href(SOME_TEXT)
+                                attributes(href(SOME_TEXT))
                         )
                 )
         ).toString();
