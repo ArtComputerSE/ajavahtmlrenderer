@@ -6,6 +6,16 @@ before_deploy:
 - mvn help:evaluate -N -Dexpression=project.version|grep -v '\['
 - export project_version=$(mvn help:evaluate -N -Dexpression=project.version|grep -v '\[')
 
+addons:
+  sonarcloud:
+    organization: artcomputerse
+    token:
+      secure: IrZTPm3ZDGKa09JvernpGqJB8VpInIL/1gdkFkE9JwELeRLOUKwahpkL+aA4k2LzeQATIwRrScDqgLXQBwkFGb2wxIc67wIiotOslvbEoJv0JmgJrhEbud2oap/isN+sGF7Npo4H05JtF8fX/FgwJqq48Re6p+Xf/NHjhZbGdX03smwtZCQ9UA5LInEpwrVE7B51MBlzIMpoPZYmzGTpddrFHkn9kNZNBcSa3UYAZAH2CbpLLflzvlZ1lSFfMUlJjxuX31Raszxr3N98wYo9gj80X8h3f+2fkFCijF0eKIetlJAkfeeRC5FWSpz9xdHgdmRbmC+YluUGCDfZngXJEpIo8ZZCQg57c2/Pu3u9IBekQRvuvJofeB0izOUE0HUqk6TviCQcab4qbGVkzjIysoDM7XeKzQ935NjqGRoCu6QVC/2BV5xSBu/od6DcN/NqcvwY+had2Sm1k3pZb+gX/UNmHMTtW9rdx8f5zdJO7kW55rDwDtrfsc6u2uVNEfdnkaRE/Meo5dmk/0l+P/nX09rJ/pUAWL/SFHkvaBrQV47yBB8qGUOqfL7AczZU8xv8ciU8Ul6Z5pdad2CYOIlVtI0UCaAwlIYufNdxN6qgyEogZL4k6iTMf6d9y3afDFsVDcOpYoQpHCA9zf1YXZejm8fnIiXzQDZkJQWZjqltCgU=
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+
 deploy:
 - provider: bintray
   file: "bintray.json"
