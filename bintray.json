@@ -9,14 +9,14 @@
     ]
   },
   "version": {
-    "name": "1.0.3",
+    "name": "1.0.4",
     "released": "2018-09-07",
-    "vcs_tag": "1.0.3"
+    "vcs_tag": "1.0.4"
   },
   "files": [
     {
       "includePattern": "target/(.*jar)",
-      "uploadPattern": "se/artcomputer/html/ajavahtmlrenderer/1.0.3/$1"
+      "uploadPattern": "se/artcomputer/html/ajavahtmlrenderer/1.0.4/$1"
     }
   ],
   "publish": true
