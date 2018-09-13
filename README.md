@@ -1,6 +1,5 @@
 [![build_status](https://travis-ci.org/ArtComputerSE/ajavahtmlrenderer.svg?branch=master)](https://travis-ci.org/ArtComputerSE/ajavahtmlrenderer)
-
-[![Sonar](https://sonarcloud.io/api/project_badges/measure?project=se.artcomputer.html%3Aajavahtmlrenderer&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=se.artcomputer.html%3Aajavahtmlrenderer&metric=alert_status)
+[![Sonar](https://sonarcloud.io/api/project_badges/measure?project=se.artcomputer.html%3Aajavahtmlrenderer&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=se.artcomputer.html%3Aajavahtmlrenderer&metric=alert_status) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=se.artcomputer.html%3Aajavahtmlrenderer&metric=bugs)](https://sonarcloud.io/api/project_badges/measure?project=se.artcomputer.html%3Aajavahtmlrenderer&metric=bugs)
 
 #  A Java html renderer
 Based on ideas from programming in Elm, this Java library gives you HTML rendering for 
