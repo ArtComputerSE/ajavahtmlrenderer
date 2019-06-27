@@ -4,15 +4,17 @@ package se.artcomputer.html;
 public class Html {
 
     @SuppressWarnings("squid:S1700")
-    private static final String HTML = "html";
-    private static final String HEAD = "head";
-    private static final String LINK = "link";
-    private static final String BODY = "body";
-    private static final String H1 = "h1";
-    private static final String DIV = "div";
     private static final String A = "a";
+    private static final String BODY = "body";
+    private static final String DIV = "div";
     private static final String FORM = "form";
+    private static final String HEAD = "head";
+    private static final String HTML = "html";
+    private static final String H1 = "h1";
     private static final String INPUT = "input";
+    private static final String LINK = "link";
+    private static final String META = "meta";
+    private static final String P = "p";
 
     private Html() {
         // Utility class
@@ -46,6 +48,10 @@ public class Html {
         return node(HEAD, contents);
     }
 
+    public static Node meta(Attributes attributes) {
+        return node(META, attributes);
+    }
+
     public static Node link(Attributes attributes) {
         return node(LINK, attributes);
     }
@@ -64,6 +70,10 @@ public class Html {
 
     public static Node h1(Attributes attributes, Node... contents) {
         return node(H1, attributes, contents);
+    }
+
+    public static Node paragraph(Node... contents) {
+        return node(P, contents);
     }
 
     public static Node div() {

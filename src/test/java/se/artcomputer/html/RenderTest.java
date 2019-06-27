@@ -79,7 +79,7 @@ public class RenderTest {
     }
 
     @Test
-    public void bodyWithAtttributes() {
+    public void bodyWithAttributes() {
         String actual = Html.html(
                 body(
                         attributes(className(SOME_CLASS)),
@@ -106,6 +106,31 @@ public class RenderTest {
         String expected = "<html ><head >" +
                 "<link href=\"" + SOME_TEXT + "\"></link>" +
                 "</head></html>";
+        assertThat(actual, is(expected));
+    }
+
+    @Test
+    public void metaWithCharSet() {
+
+        String actual = Html.html(
+                head(
+                        meta(
+                                attributes(new Attribute("charset", "UTF-8"))
+                        )
+                )
+        ).toString();
+
+        String expected = "<html ><head >" +
+                "<meta charset=\"UTF-8\"></meta>" +
+                "</head></html>";
+        assertThat(actual, is(expected));
+    }
+
+    @Test
+    public void aParagraph() {
+        String actual = Html.paragraph().toString();
+
+        String expected = "<p ></p>";
         assertThat(actual, is(expected));
     }
 }
