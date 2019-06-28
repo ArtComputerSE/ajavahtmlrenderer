@@ -34,7 +34,7 @@ This is a super simple little Java library where you can create any HTML snippet
 without leaving Java. Of course you need to know the basics of HTML, but I guess you already
 do that.
 
-The repository contains also a demo application written in Spring Boot. It serves some
+The repository https://github.com/ArtComputerSE/ajavahtmlrenderer-demo contains a demo application written in Spring Boot. It serves some
 really hideous pages. Here is an example from it, giving you a feel for the design
 philosophy.
 
