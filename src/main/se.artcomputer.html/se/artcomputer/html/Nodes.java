@@ -10,7 +10,11 @@ public class Nodes {
     private final List<Node> nodeList;
 
     public Nodes(Node... nodeList) {
-        this.nodeList = Arrays.stream(nodeList).collect(Collectors.toList());
+        this(Arrays.stream(nodeList).collect(Collectors.toList()));
+    }
+
+    public Nodes(List<Node> nodeList) {
+        this.nodeList = nodeList;
     }
 
     @Override

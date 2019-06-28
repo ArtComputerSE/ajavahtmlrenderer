@@ -10,7 +10,11 @@ public class Attributes {
 
 
     public Attributes(Attribute... attributeList) {
-        this.attributeList = Arrays.stream(attributeList).collect(Collectors.toList());
+        this(Arrays.stream(attributeList).collect(Collectors.toList()));
+    }
+
+    public Attributes(List<Attribute> attributeList) {
+        this.attributeList = attributeList;
     }
 
     @Override
