@@ -3,12 +3,12 @@ package se.artcomputer.html;
 @SuppressWarnings("WeakerAccess")
 public class Html {
 
-    @SuppressWarnings("squid:S1700")
     private static final String A = "a";
     private static final String BODY = "body";
     private static final String DIV = "div";
     private static final String FORM = "form";
     private static final String HEAD = "head";
+    @SuppressWarnings("squid:S1700") // Field must not have same name as class.
     private static final String HTML = "html";
     private static final String H1 = "h1";
     private static final String INPUT = "input";
