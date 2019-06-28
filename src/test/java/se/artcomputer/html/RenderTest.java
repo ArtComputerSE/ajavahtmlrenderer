@@ -133,4 +133,16 @@ public class RenderTest {
         String expected = "<p ></p>";
         assertThat(actual, is(expected));
     }
+
+    @Test
+    public void anOrderedList() {
+        String actual = Html.ol(
+                Html.li(
+                        text("some text")
+                )
+        ).toString();
+
+        String expected = "<ol ><li >some text</li></ol>";
+        assertThat(actual, is(expected));
+    }
 }

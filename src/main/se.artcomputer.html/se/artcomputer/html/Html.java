@@ -12,8 +12,10 @@ public class Html {
     private static final String HTML = "html";
     private static final String H1 = "h1";
     private static final String INPUT = "input";
+    private static final String LI = "li";
     private static final String LINK = "link";
     private static final String META = "meta";
+    private static final String OL = "ol";
     private static final String P = "p";
 
     private Html() {
@@ -80,12 +82,20 @@ public class Html {
         return node(INPUT, attributes);
     }
 
+    public static Node li(Node... nodes) {
+        return node(LI, nodes);
+    }
+
     public static Node link(Attributes attributes) {
         return node(LINK, attributes);
     }
 
     public static Node meta(Attributes attributes) {
         return node(META, attributes);
+    }
+
+    public static Node ol(Node... nodes) {
+        return node(OL, nodes);
     }
 
     public static Node paragraph(Node... contents) {
