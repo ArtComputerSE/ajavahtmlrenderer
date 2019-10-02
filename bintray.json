@@ -9,18 +9,18 @@
     ]
   },
   "version": {
-    "name": "1.0.8",
+    "name": "1.0.9",
     "released": "2019-10-02",
-    "vcs_tag": "1.0.8"
+    "vcs_tag": "1.0.9"
   },
   "files": [
     {
       "includePattern": "target/(.*jar)",
-      "uploadPattern": "se/artcomputer/html/ajavahtmlrenderer/1.0.8/$1"
+      "uploadPattern": "se/artcomputer/html/ajavahtmlrenderer/1.0.9/$1"
     },
     {
       "includePattern": "pom.xml",
-      "uploadPattern": "se/artcomputer/html/ajavahtmlrenderer/1.0.8/pom.xml"
+      "uploadPattern": "se/artcomputer/html/ajavahtmlrenderer/1.0.9/ajavahtmlrenderer-1.0.9.pom"
     }
   ],
   "publish": true
